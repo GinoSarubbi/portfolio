@@ -318,6 +318,7 @@
                             class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                             placeholder="Dejá tu mensaje..."></textarea>
                     </div>
+
                     <button type="submit" aria-label="Conectar"
                         class="flex items-center gap-2 animate-bounce h-10 justify-center px-5 text-sm font-bold rounded-lg bg-primary text-white sm:w-fit hover:brightness-90 focus:ring-4 focus:outline-none focus:ring-primary/50">
                         Conectar
@@ -343,25 +344,5 @@
     </footer>
 </body>
 <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-<script>
-  (function(){
-    emailjs.init("XB3OvHNue_oid0KNT");
-  })();
-
-  document.getElementById("contact-form").addEventListener("submit", function(e) {
-    e.preventDefault();
-
-    emailjs.sendForm('service_1tl140l', 'template_82vwnid', this)
-      .then(function() {
-        alert("✅ ¡Mensaje enviado correctamente!");
-        document.getElementById("contact-form").reset();
-      }, function(error) {
-        alert("❌ Error al enviar el mensaje...\n" + JSON.stringify(error));
-      });
-  });
-</script>
-
-
-
-
+<script src="./assets/js/sendemail.js"></script>
 </html>
