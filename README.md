@@ -16,12 +16,6 @@
 
 ---
 
-## 📸 Preview
-
-![screenshot](./assets/img/preview.png) 
-
----
-
 ## 📁 Estructura del proyecto
 
 ```bash
