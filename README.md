@@ -18,7 +18,7 @@
 
 ## 📸 Preview
 
-![screenshot](./assets/img/preview.png) <!-- Reemplazá esto con el nombre real de tu captura si tenés una -->
+![screenshot](./assets/img/preview.png) 
 
 ---
 
