@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portafolio - Gino</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./assets/css/styles.css" />
+    <link rel="icon" href="./assets/img/programador.png" type="image/x-icon" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -26,20 +26,24 @@
 
 <body class="bg-white text-gray-800 antialiased">
 
-    <header class="py-4 fixed top-0 left-0 w-full bg-white  z-50">
+    <header class="py-4 fixed top-0 left-0 w-full bg-white z-50">
         <div class="max-w-6xl mx-auto flex justify-between items-center px-6">
-            <div class="text-xl font-bold">Gino</div>
-            <nav class="hidden md:flex gap-8 text-sm font-medium">
-                <a href="#skills" class="hover:text-primary transition">Habilidades</a>
-                <a href="#projects" class="hover:text-primary transition">Proyectos</a>
-                <a href="#contact" class="hover:text-primary transition">Contacto</a>
-            </nav>
+            <a href="#" class="text-xl font-bold">Gino</a>
+
             <div class="md:hidden">
-                <!-- para minimalismo no implemento el burger funcional, lo podés agregar después -->
-                <button aria-label="menú" class="text-gray-600">☰</button>
+                <button aria-label="menú" aria-expanded="false" class="text-gray-600 text-3xl" id="btn-toggler"
+                    onclick="toggleMenu()">☰</button>
             </div>
+
+            <nav id="menu"
+                class="hidden md:justify-end md:gap-6  absolute top-full left-0 w-full bg-white shadow-md px-6 py-4 flex flex-col gap-2 text-sm font-medium md:static md:flex md:flex-row md:shadow-none md:px-0 md:py-0">
+                <a href="#skills" class="hover:text-primary transition ml-4 md:ml-0">Habilidades</a>
+                <a href="#projects" class="hover:text-primary transition ml-4 md:ml-0">Proyectos</a>
+                <a href="#contact" class="hover:text-primary transition ml-4 md:ml-0">Contacto</a>
+            </nav>
         </div>
     </header>
+
 
     <!-- MAIN-->
     <main>
@@ -47,10 +51,12 @@
         <section
             class="min-h-screen flex flex-col-reverse gap-0 md:gap-10 md:flex-row items-center px-6 py-12 max-w-6xl mx-auto">
             <!-- Texto -->
-            <div class="flex-1 mt-10 md:mt-0 flex flex-col items-center justify-center text-center mx-auto md:items-start md:justify-start md:text-left md:mx-0">
+            <div
+                class="flex-1 mt-10 md:mt-0 flex flex-col items-center justify-center text-center mx-auto md:items-start md:justify-start md:text-left md:mx-0">
                 <p class="uppercase text-sm text-gray-500 mb-2">Developer Full Stack</p>
                 <div class="flex items-center gap-4 flex-wrap">
-                    <h1 class="text-4xl font-bold mb-4">Hola, soy Gino</h1>
+                    <h1 class="text-4xl mb-4">Hola, soy<h1 class="text-4xl font-bold mb-4">Gino</h1>
+                    </h1>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                         stroke="currentColor" class="w-12 h-12 text-primary animate-bounce hidden">
                         <path stroke-linecap="round" stroke-linejoin="round"
@@ -58,12 +64,12 @@
                     </svg>
                 </div>
                 <p class="text-gray-600 mb-6 max-w-prose">
-                    Experiencia de alto nivel en diseño y desarrollo web, produciendo trabajo de calidad. Me enfoco en
+                    Desarrollador Web con Experiencia de alto nivel, produciendo trabajo de calidad. Me enfoco en
                     construir interfaces limpias, rápidas y funcionales.
                 </p>
                 <div class="flex gap-4 flex-wrap">
                     <a href="#contact"
-                        class="inline-flex items-center px-6 py-3 bg-primary text-white rounded-lg shadow hover:opacity-90 transition">
+                        class="inline-flex animate-bounce items-center px-6 py-3 bg-primary text-white rounded-lg shadow hover:opacity-90 transition">
                         Contáctame
                     </a>
                 </div>
@@ -83,14 +89,15 @@
                                 d="M12 .297a12 12 0 00-3.797 23.4c.6.111.82-.26.82-.578 0-.285-.01-1.04-.016-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.082-.73.082-.73 1.205.084 1.84 1.239 1.84 1.239 1.07 1.835 2.81 1.305 3.495.998.108-.776.418-1.305.76-1.605-2.665-.304-5.467-1.333-5.467-5.93 0-1.31.468-2.38 1.235-3.22-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.3 1.23a11.52 11.52 0 013.003-.404c1.018.005 2.044.138 3.003.404 2.29-1.552 3.296-1.23 3.296-1.23.654 1.653.243 2.873.12 3.176.77.84 1.233 1.91 1.233 3.22 0 4.61-2.807 5.625-5.48 5.92.43.37.813 1.096.813 2.21 0 1.596-.015 2.882-.015 3.268 0 .32.216.694.825.576A12.004 12.004 0 0012 .297" />
                         </svg>
                     </a>
-                    <a href="#"  class="w-10 h-10 flex items-center justify-center bg-gray-100 rounded-full hover:bg-red-300
-                    transition focus:outline-none focus-visible:ring-2 focus-visible:ring-primary" onclick="window.location.href = 'mailto:' + 'gsarubbi28' + '@gmail.com' ">
-                    <svg width="20" height="20" role="img" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <title>Gmail</title>
-                        <path
-                            d="M20.4 4H3.6C2.156 4 1 5.156 1 6.6v10.8c0 1.444 1.156 2.6 2.6 2.6h16.8c1.444 0 2.6-1.156 2.6-2.6V6.6C23 5.156 21.844 4 20.4 4zm-8.4 7.2L3.9 6.6h16.2l-8.7 4.6zm-9 6.3V8.9l8.4 4.44 8.4-4.44v8.7H3z" />
-                    </svg>
+                    <a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-100 rounded-full hover:bg-red-300
+                    transition focus:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+                        onclick="window.location.href = 'mailto:' + 'gsarubbi28' + '@gmail.com' ">
+                        <svg width="20" height="20" role="img" viewBox="0 0 24 24" fill="currentColor"
+                            aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                            <title>Gmail</title>
+                            <path
+                                d="M20.4 4H3.6C2.156 4 1 5.156 1 6.6v10.8c0 1.444 1.156 2.6 2.6 2.6h16.8c1.444 0 2.6-1.156 2.6-2.6V6.6C23 5.156 21.844 4 20.4 4zm-8.4 7.2L3.9 6.6h16.2l-8.7 4.6zm-9 6.3V8.9l8.4 4.44 8.4-4.44v8.7H3z" />
+                        </svg>
                     </a>
                 </div>
             </div>
@@ -117,6 +124,8 @@
         <section class="py-20 bg-gray-900 flex flex-col items-center" id="skills">
             <div class="max-w-6xl mx-auto px-6 space-y-8">
                 <h2 class="text-3xl font-bold text-white text-center">Habilidades</h2>
+                <p class="text-gray-400 text-center max-w-2xl mx-auto">
+                    Aquí están algunas de las tecnologías y herramientas con las que trabajo.
                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                     <div id="card" class="skill-card bg-gray-800 p-4 rounded-lg shadow hover:shadow-lg transition">
                         <h3 class="text-lg font-semibold text-white">HTML</h3>
@@ -159,7 +168,7 @@
             <div class="text-center max-w-2xl">
                 <h1 class="text-3xl font-bold text-primary">Proyectos</h1>
                 <p class="text-gray-400 mb-4">
-                    Acá algunos de mis proyectos más recientes. Cada uno refleja mi enfoque en la calidad y la
+                    Algunos de mis proyectos más recientes. Cada uno refleja mi enfoque en la calidad y la
                     funcionalidad.
                 </p>
             </div>
@@ -199,7 +208,8 @@
                                 demo</a>
                         </div>
                         <p class="text-gray-700 text-base">
-                            Calculadora web oscura, responsive y rápida con operaciones encadenadas, vista previa y control por teclado. Hecha con HTML, CSS/Bootstrap y JavaScript.
+                            Calculadora web oscura, responsive y rápida con operaciones encadenadas, vista previa y
+                            control por teclado. Hecha con HTML, CSS/Bootstrap y JavaScript.
                         </p>
                     </div>
                     <div class="px-6 pt-4 pb-2">
@@ -336,13 +346,14 @@
 
     <footer aria-label="Contacto y derechos" class="bg-white py-12 sm:mt-px-20">
         <div class="max-w-6xl mx-auto px-6 text-center">
-            <p class="text-sm text-gray-900 mb-2">© <span id="year"></span> Gino Sarubbi. Todos los derechos reservados.
+            <p class="text-sm text-gray-600 mb-2">© <span id="year"></span> Gino Sarubbi. Todos los derechos reservados.
             </p>
-            <p class="text-sm text-gray-900">Hecho con ❤️ usando Tailwind CSS</p>
+            <p class="text-sm text-gray-600">Hecho con ❤️ usando <strong>Tailwind CSS</strong></p>
         </div>
     </footer>
 </body>
 <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 <script src="./js/sendemail.js"></script>
+<script src="./js/toggler.js"></script>
 
 </html>
